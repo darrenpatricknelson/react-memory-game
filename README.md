@@ -4,8 +4,13 @@ To install on your side:
 
 - open the terminal
 - cd to the project folder and type the command 'npm install'
+- Once the app has successfulyl been installed, type npm start into the terminal
 
-Once the app has successfulyl been installed, type npm start into the terminal
+or:
+
+If you prefer to play the game on the web:
+
+- click on this link: https://react-memory-game-heroku.herokuapp.com/
 
 ### Rules of the game
 
