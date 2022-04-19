@@ -137,19 +137,25 @@ function App() {
   // focus on this!!!!
   // We need this to bring up the score sheet once the game is done
   useEffect(() => {
+    // I'm creating an arary filled with the matched value of the object created by the shuffleCards function
     const matched = cards.map((card) => card.matched);
 
-    console.log(matched);
-
+    // Testing the array created above
+    // check the length and if every value is equal to true
     if (matched.length && matched.every((v) => v === true)) {
+      // if criteria is met, the score sheet component is showed
       setShowingScore(true);
 
+      // the rules of the game is to check whether the palyer can beat the gamne in less than 12 moves
+      // (which is pretty easy)
       if (turns < 13) {
+        // if true, the won state will increase and a message telling the user they won will display
         setWon((prevScore) => prevScore + 1);
         setResult(
           'Congratulations! You have matched the cards in less than 12 moves. You are a winner!'
         );
       } else {
+        // if false, the loss state will increase and a message telling the user they lost will display
         setLoss((prevScore) => prevScore + 1);
         setResult(
           'Ah Shucks! It seems you could not complete the game in less than 12 moves. The game has bested you. Try again.'
@@ -203,10 +209,10 @@ function App() {
     setTurns(0);
     setChoiceOne(null);
     setChoiceTwo(null);
-    setShowingScore(false);
+    // setShowingScore(false);
     setWon(0);
     setLoss(0);
-    setResult('');
+    setResult('Click the "Play again" button to start a new game');
   };
 
   return (
