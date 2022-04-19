@@ -3,10 +3,7 @@ export default function Rules({ hideRules }) {
     <div className="overlay">
       <div className="container">
         <h1> Rules of the game </h1>
-        <p>
-          The rules of the game are simple: match all the animals before the
-          game limit
-        </p>
+        <p>Aim of the game: match all the animals before the game limit</p>
         <ol>
           <li>
             Click on the 'new game' button to shuffle the cards and start a new

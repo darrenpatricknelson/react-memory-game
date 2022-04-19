@@ -217,7 +217,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Magic match</h1>
+      <h1>Remember them</h1>
       <button onClick={shuffleCards}>New game</button>
       <button onClick={showRules}>Rules</button>
 
