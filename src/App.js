@@ -18,33 +18,33 @@ const cardImages = [
   {
     src: Cat,
     matched: false,
-    alt: 'Image of a cat',
+    alt: 'Image of a cat'
   },
   {
     src: Dog,
     matched: false,
-    alt: 'Image of a dog',
+    alt: 'Image of a dog'
   },
   {
     src: Frog,
     matched: false,
-    alt: 'Image of a frog',
+    alt: 'Image of a frog'
   },
   {
     src: Lion,
     matched: false,
-    alt: 'Image of a lion',
+    alt: 'Image of a lion'
   },
   {
     src: Monkey,
     matched: false,
-    alt: 'Image of a monkey',
+    alt: 'Image of a monkey'
   },
   {
     src: Rabbit,
     matched: false,
-    alt: 'Image of a rabbit',
-  },
+    alt: 'Image of a rabbit'
+  }
 ];
 
 function App() {
@@ -137,11 +137,11 @@ function App() {
   // focus on this!!!!
   // We need this to bring up the score sheet once the game is done
   useEffect(() => {
-    const matched = cards.map((card) => (card.matched ? card.matched : null));
+    const matched = cards.map((card) => card.matched);
 
     console.log(matched);
 
-    if (matched.every((v) => v === true)) {
+    if (matched.length && matched.every((v) => v === true)) {
       setShowingScore(true);
 
       if (turns < 13) {
